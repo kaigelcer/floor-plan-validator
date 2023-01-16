@@ -3,10 +3,10 @@
     <h2>Rooms Info</h2>
     <div v-for="room in rooms" class="room-info">
       <p>Room: {{ room.name }}</p>
-      <p>Left: {{ room.left }}</p>
-      <p>Right: {{ room.right }}</p>
-      <p>Top: {{ room.top }}</p>
-      <p>Bottom: {{ room.bottom }}</p>
+      <p>Left: {{ room.left / 20}}</p>
+      <p>Right: {{ room.right / 20 }}</p>
+      <p>Top: {{ room.top / 20 }}</p>
+      <p>Bottom: {{ room.bottom / 20 }}</p>
     </div>
   </div>
 </template>

@@ -1,20 +1,33 @@
 <template>
+  <a
+    href="https://github.com/kaigelcer/floor-plan-validator/blob/master/src/App.vue"
+    >View Source Code</a
+  >
+
   <h1>Floor Plan Validator</h1>
 
   <div class="app-container">
     <div class="grid-container">
       <div class="grid">
-        <RoomNode :rooms="rooms" @modified="() => {modified = true}" />
+        <RoomNode
+          :rooms="rooms"
+          @modified="
+            () => {
+              modified = true;
+            }
+          "
+        />
       </div>
       <div class="button-row">
         <button @click="addRoom()">Add Room</button>
         <button @click="validateFloorPlan()">Check Floor Plan</button>
-        <label v-if="!modified">{{ modified ? null : valid ? "Valid" : "Invalid"}}</label>
+        <label v-if="!modified">{{
+          modified ? null : valid ? "Valid" : "Invalid"
+        }}</label>
       </div>
     </div>
     <RoomsInfo :rooms="rooms" />
   </div>
-
 </template>
 
 <script>
@@ -53,7 +66,7 @@ export default defineComponent({
         connections: [],
         id: new Date().getTime(),
       });
-      this.modified = true
+      this.modified = true;
     },
     validateFloorPlan() {
       this.valid = true;
