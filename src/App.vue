@@ -1,6 +1,8 @@
 <template>
   <a
     href="https://github.com/kaigelcer/floor-plan-validator/blob/master/src/App.vue"
+    target="_blank"
+    rel="noopener noreferrer"
     >View Source Code</a
   >
 
